@@ -18,7 +18,11 @@
 <body class="font-sans antialiased bg-[#111827]">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.navigation')
-
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-gradient-to-r from-blue-900 to-blue-700 shadow">
